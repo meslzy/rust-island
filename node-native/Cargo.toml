@@ -1,0 +1,10 @@
+[package]
+name = "node-native"
+version = "1.0.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+neon = { version = "1.0.0", features = ["napi-6"] }

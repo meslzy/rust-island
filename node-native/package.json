@@ -1,0 +1,17 @@
+{
+  "name": "node-native",
+  "version": "1.0.0",
+  "main": "src/main.js",
+  "type": "module",
+  "scripts": {
+    "build": "cargo-cp-artifact -nc index.node -- cargo build --message-format=json-render-diagnostics",
+    "build-debug": "npm run build --",
+    "build-release": "npm run build -- --release",
+    "install": "npm run build-release",
+    "start": "node src/main.js"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.2",
+    "cargo-cp-artifact": "^0.1.8"
+  }
+}
